@@ -1,0 +1,32 @@
+.selected{fill:#58a364;}
+.st1{fill:#373A3C;}
+
+.circular-text{
+  position: fixed;
+  top: 24%;
+  left: 50%;
+  transform: translate(50%, 50%);
+  font-size: 42px;
+  font-weight: 700;
+  transition: 0.5s ease-out;
+  color: darkorange;
+  -webkit-text-stroke: 1px royalblue;
+}
+
+.spinner-nav{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-between;
+  border: 1px solid saddlebrown;
+  top: 45%;
+  left: 30%;
+  transform: translate(50%, 50%);
+}
+
+.description-text{
+  font-size: 18px;
+  padding-left: 3em;
+  padding-right: 3em;
+}
