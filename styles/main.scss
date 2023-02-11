@@ -1,5 +1,5 @@
 @import "./home";
-@import "./components/Wheel";
+@import "./featured";
 @import "./components/header";
 @import "./components/footer";
 
@@ -87,17 +87,13 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #efece6 ;
+  height: 100vh;
 }
 
 a {

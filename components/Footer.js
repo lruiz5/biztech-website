@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-scroll/modules";
 
 const Footer = () => {
   return (
@@ -35,7 +35,10 @@ const Footer = () => {
             </Link>
           </div>
           <div className="footer_line__UuaEz"></div>
-          <Link className="footer_tab__Ndquc footer_selected__GjUa9">
+          <Link
+            className="footer_tab__Ndquc footer_selected__GjUa9"
+            to="managed-it-services"
+          >
             <div className="footer_icon__2qZ_U">
               <img
                 alt="Tools"
@@ -76,7 +79,7 @@ const Footer = () => {
             </div>
             <div className="footer_popup__6zzE6">Managed IT</div>
           </Link>
-          <Link className="footer_tab__Ndquc false">
+          <Link className="footer_tab__Ndquc false" to="web-design">
             <div className="footer_icon__2qZ_U">
               <img
                 alt="Code"
@@ -117,7 +120,7 @@ const Footer = () => {
             </div>
             <div className="footer_popup__6zzE6">Web Design</div>
           </Link>
-          <Link className="footer_tab__Ndquc false">
+          <Link className="footer_tab__Ndquc false" to="networking-solutions">
             <div className="footer_icon__2qZ_U">
               <img
                 alt="Network"
@@ -158,7 +161,7 @@ const Footer = () => {
             </div>
             <div className="footer_popup__6zzE6">Networking Solutions</div>
           </Link>
-          <Link className="footer_tab__Ndquc false">
+          <Link className="footer_tab__Ndquc false" to="data-management">
             <div className="footer_icon__2qZ_U">
               <img
                 alt="Data"

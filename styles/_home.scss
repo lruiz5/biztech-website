@@ -4,6 +4,24 @@
   text-align: center; 
   width: 70%; 
 }
+.intro-main{
+  
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -50vh;
+    z-index: 1;
+    background: #efece6;
+    overflow: hidden;
+
+    &:-first-container{
+      z-index: 10;
+      opacity: 1;
+      transform: none;
+    }
+}
 
 @media only screen and (max-width:600px){
  
