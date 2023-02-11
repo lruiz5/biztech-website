@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer
@@ -7,7 +9,7 @@ const Footer = () => {
       <div className="footer_container__HdEoV">
         <div className="footer_left__h63j3">
           <div className="footer_lockup__6Qt_9">
-            <a
+            <Link
               className="footer_mainLogo__j0C_z"
               style={{ marginRight: "0px" }}
               href="/"
@@ -30,10 +32,10 @@ const Footer = () => {
                   }}
                 />
               </div>
-            </a>
+            </Link>
           </div>
           <div className="footer_line__UuaEz"></div>
-          <a className="footer_tab__Ndquc footer_selected__GjUa9">
+          <Link className="footer_tab__Ndquc footer_selected__GjUa9">
             <div className="footer_icon__2qZ_U">
               <img
                 alt="Tools"
@@ -73,8 +75,8 @@ const Footer = () => {
               />
             </div>
             <div className="footer_popup__6zzE6">Managed IT</div>
-          </a>
-          <a className="footer_tab__Ndquc false">
+          </Link>
+          <Link className="footer_tab__Ndquc false">
             <div className="footer_icon__2qZ_U">
               <img
                 alt="Code"
@@ -114,8 +116,8 @@ const Footer = () => {
               />
             </div>
             <div className="footer_popup__6zzE6">Web Design</div>
-          </a>
-          <a className="footer_tab__Ndquc false">
+          </Link>
+          <Link className="footer_tab__Ndquc false">
             <div className="footer_icon__2qZ_U">
               <img
                 alt="Network"
@@ -155,8 +157,8 @@ const Footer = () => {
               />
             </div>
             <div className="footer_popup__6zzE6">Networking Solutions</div>
-          </a>
-          <a className="footer_tab__Ndquc false">
+          </Link>
+          <Link className="footer_tab__Ndquc false">
             <div className="footer_icon__2qZ_U">
               <img
                 alt="Data"
@@ -196,7 +198,7 @@ const Footer = () => {
               />
             </div>
             <div className="footer_popup__6zzE6">Data Management</div>
-          </a>
+          </Link>
           <div
             className="footer_underline__la4Wc"
             style={{ transform: "translateX(0px) scale(1)" }}
@@ -204,26 +206,29 @@ const Footer = () => {
         </div>
         <div className="footer_right__iQ9v4">
           <div className="footer_mainContainer__SOtcL">
-            <a
+            <Link
               className="footer_link__BTBa6 false"
               target="_blank"
               href="https://twitter.com/"
             >
               Twitter
-            </a>
-            <a className="footer_link__BTBa6 false" href="/founders">
+            </Link>
+            <Link className="footer_link__BTBa6 false" href="/founders">
               Founders
-            </a>
-            <a className="footer_link__BTBa6 false" href="/team">
+            </Link>
+            <Link className="footer_link__BTBa6 false" href="/team">
               Team
-            </a>
-            <a className="footer_link__BTBa6 false" href="/faqs">
+            </Link>
+            <Link className="footer_link__BTBa6 false" href="/faqs">
               FAQs
-            </a>
+            </Link>
           </div>
-          <a className="footer_mainButton__c_pnE" href="http://localhost:3000">
+          <Link
+            className="footer_mainButton__c_pnE"
+            href="http://localhost:3000"
+          >
             Start
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
