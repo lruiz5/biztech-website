@@ -20,6 +20,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-resize-detector": "^8.0.3",
+    "react-scroll": "^1.8.9",
     "react-scroll-parallax": "^3.3.2",
     "reactstrap": "^9.1.5",
     "sass": "^1.58.0"

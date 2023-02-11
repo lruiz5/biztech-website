@@ -15,7 +15,10 @@ export default function Home() {
       </Head>
       <Header />
       <IntroMain />
-      <FeatureSection />
+      <FeatureSection id="managed-it-services" title="Managed IT Services" />
+      <FeatureSection id="web-design" title="Web Design" />
+      <FeatureSection id="networking-solutions" title="Networking Solutions" />
+      <FeatureSection id="data-management" title="Data Management" />
     </>
   );
 }
