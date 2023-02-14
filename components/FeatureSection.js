@@ -1,14 +1,15 @@
-const FeatureSection = () => {
+const FeatureSection = ({ id, title, subtitle, description, last }) => {
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "#000000",
-          height: "100vh",
-          position: "relative",
-          zIndex: 1,
-        }}
-      ></div>
+      <div id={id} className="featured-container">
+        <div className="featured-image"></div>
+        <div className="featured">
+          <h1 className=" featured-title">{title}</h1>
+          <h5 className=" featured-subtitle">{subtitle}</h5>
+          <p className=" featured-description">{description}</p>
+        </div>
+        {!last && <hr style={{ borderWidth: "2px" }} />}
+      </div>
     </>
   );
 };

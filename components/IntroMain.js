@@ -6,7 +6,13 @@ const IntroMain = () => {
   return (
     <ReactResizeDetector handleWidth>
       {({ width, height }) => (
-        <div style={{ backgroundColor: "#efece6", height: "105vh", zIndex: 0 }}>
+        <div
+          style={{
+            backgroundColor: "#efece6",
+            height: "100vh",
+            zIndex: 0,
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -14,8 +20,8 @@ const IntroMain = () => {
               justifyContent: "center",
             }}
           >
-            <h1 className="site-main-title">
-              The word abalone for gluten abrasions
+            <h1 className="site-main-title at-item">
+              The word abalone for your business
             </h1>
           </div>
           <Parallax
@@ -23,12 +29,12 @@ const IntroMain = () => {
               display: "flex",
               justifyContent: "center",
             }}
-            speed={width < 688 ? -5 : 50}
+            speed={-5}
           >
             <Image
               src={`/image/${width < 688 ? "iphone" : "ipad"}-intro.webp`}
-              width={width}
-              height={826}
+              width={width < 688 ? width : 1400}
+              height={width < 688 ? 826 : 1200}
             />
           </Parallax>
         </div>

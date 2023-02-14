@@ -4,7 +4,42 @@ import Footer from "@/components/Footer";
 import IntroMain from "@/components/IntroMain";
 import FeatureSection from "@/components/FeatureSection";
 
-export default function Home() {
+const featured = [
+  {
+    id: "managed-it-services",
+    title: "Managed IT Services",
+    subtitle:
+      "Fund your account by raising on Capital or transferring funds from an existing external account",
+    description:
+      "Every founder on Capital gets an FDIC-insured business checking account that earns 4% APY, with standard account and routing numbers, to store and deposit unlimited funds, for free.",
+  },
+  {
+    id: "web-design",
+    title: "Web Designed",
+    subtitle:
+      "Bringing your digital vision to life with creativity, functionality, and innovation",
+    description:
+      "Every founder on Capital gets an FDIC-insured business checking account that earns 4% APY, with standard account and routing numbers, to store and deposit unlimited funds, for free.",
+  },
+  {
+    id: "networking-solutions",
+    title: "Networking Solutions",
+    subtitle:
+      "Empower your business with seamless connectivity and unparalleled performance",
+    description:
+      "Every founder on Capital gets an FDIC-insured business checking account that earns 4% APY, with standard account and routing numbers, to store and deposit unlimited funds, for free.",
+  },
+  {
+    id: "data-management",
+    title: "Data Management",
+    subtitle:
+      "Fund your account by raising on Capital or transferring funds from an existing external account",
+    description:
+      "Every founder on Capital gets an FDIC-insured business checking account that earns 4% APY, with standard account and routing numbers, to store and deposit unlimited funds, for free.",
+  },
+];
+
+const Home = () => {
   return (
     <>
       <Head>
@@ -14,8 +49,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <IntroMain />
-      <FeatureSection />
+      <div>
+        <IntroMain />
+        {featured.map((item, index) => {
+          return (
+            <FeatureSection
+              last={index === featured.length - 1}
+              item={item.id}
+              title={item.title}
+              subtitle={item.subtitle}
+              description={item.description}
+            />
+          );
+        })}
+      </div>
     </>
   );
-}
+};
+
+export default Home;

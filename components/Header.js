@@ -1,18 +1,24 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import ReactResizeDetector from "react-resize-detector";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
-import ActiveLink from "components/shared/ActiveLink";
 import Image from "next/image";
+import { Link } from "react-scroll/modules";
+
 const BsNavLink = (props) => {
-  const { href, title, className = "" } = props;
+  const { to, title, className = "" } = props;
   return (
-    <ActiveLink activeClassName="active" href={href}>
-      <Link
-        className={`nav-link port-navbar-link ${className}`}
-        title={title}
-      />
-    </ActiveLink>
+    <Link
+      activeClass="active"
+      className={`nav-link port-navbar-link ${className}`}
+      title={title}
+      to={to}
+      duration={500}
+      spy={true}
+      smooth={true}
+      offset={0}
+    >
+      {title}
+    </Link>
   );
 };
 
@@ -50,15 +56,24 @@ const Header = ({ className }) => {
           />
 
           <Collapse className="justify-content-end" isOpen={isOpen} navbar>
-            <Nav className="mr-auto" hidden={!isOpen} navbar>
+            <Nav className="mr-auto" hidden={isOpen} navbar>
               <NavItem className="port-navbar-item">
-                <BsNavLink href="/" title="Home" />
+                <BsNavLink
+                  title="Managed IT Services"
+                  to="managed-it-services"
+                />
               </NavItem>
               <NavItem className="port-navbar-item">
-                <BsNavLink href="/about" title="Page #1" />
+                <BsNavLink title="Web Design" to="web-design" />
               </NavItem>
               <NavItem className="port-navbar-item">
-                <BsNavLink href="/projects" title="Page #2" />
+                <BsNavLink
+                  title="Networking Solutions"
+                  to="networking-solutions"
+                />
+              </NavItem>
+              <NavItem className="port-navbar-item">
+                <BsNavLink title="Data Management" to="data-management" />
               </NavItem>
             </Nav>
           </Collapse>
