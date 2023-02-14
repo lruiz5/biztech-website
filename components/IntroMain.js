@@ -20,7 +20,7 @@ const IntroMain = () => {
               justifyContent: "center",
             }}
           >
-            <h1 className="site-main-title">
+            <h1 className="site-main-title at-item">
               The word abalone for your business
             </h1>
           </div>
