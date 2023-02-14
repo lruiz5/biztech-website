@@ -54,6 +54,7 @@ const Home = () => {
         {featured.map((item, index) => {
           return (
             <FeatureSection
+              key={index}
               last={index === featured.length - 1}
               item={item.id}
               title={item.title}
