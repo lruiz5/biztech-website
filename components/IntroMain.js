@@ -21,7 +21,7 @@ const IntroMain = () => {
             }}
           >
             <h1 className="site-main-title at-item">
-              The word abalone for your business
+              The IT solution for your business
             </h1>
           </div>
           <Parallax

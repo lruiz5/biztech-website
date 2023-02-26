@@ -15,9 +15,9 @@ const featured = [
   },
   {
     id: "web-design",
-    title: "Web Designed",
+    title: "Web Design",
     subtitle:
-      "Bringing your digital vision to life with creativity, functionality, and innovation",
+      "Bring your digital vision to life with creativity, functionality, and innovation",
     description:
       "Every founder on Capital gets an FDIC-insured business checking account that earns 4% APY, with standard account and routing numbers, to store and deposit unlimited funds, for free.",
   },
@@ -56,7 +56,7 @@ const Home = () => {
             <FeatureSection
               key={index}
               last={index === featured.length - 1}
-              item={item.id}
+              id={item.id}
               title={item.title}
               subtitle={item.subtitle}
               description={item.description}
@@ -64,6 +64,7 @@ const Home = () => {
           );
         })}
       </div>
+      <Footer />
     </>
   );
 };

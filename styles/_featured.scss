@@ -1,6 +1,6 @@
 .featured-container{
     background-color: #000000;
-    height: 100vh;
+    height: 95vh;
     position: relative;
     z-index: 1;
     display: flex;
@@ -13,7 +13,7 @@
     border: 1px solid #efece6;
     background-color: #efece6;
     border-radius: 15px;
-    width: 45%;
+    width: 44%;
   }
 
 .featured{
@@ -21,7 +21,7 @@
     vertical-align: baseline;
     padding-left: 3rem;
     display: grid;
-    padding-top: 18rem;
+    padding-top: 15rem;
     width: 45%;
 
     &-title{

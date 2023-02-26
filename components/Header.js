@@ -55,7 +55,7 @@ const Header = ({ className }) => {
             style={{ position: "absolute", right: "1em", top: "0.5em" }}
           />
 
-          <Collapse className="justify-content-end" isOpen={isOpen} navbar>
+          {/* <Collapse className="justify-content-end" isOpen={isOpen} navbar>
             <Nav className="mr-auto" hidden={isOpen} navbar>
               <NavItem className="port-navbar-item">
                 <BsNavLink
@@ -76,7 +76,7 @@ const Header = ({ className }) => {
                 <BsNavLink title="Data Management" to="data-management" />
               </NavItem>
             </Nav>
-          </Collapse>
+          </Collapse> */}
         </Navbar>
       )}
     </ReactResizeDetector>

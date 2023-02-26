@@ -1,22 +1,35 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll/modules";
 
 const Footer = () => {
+  const [activeTab, setActiveTab] = useState("");
+
+  useEffect(() => {
+    const scroll = (event) => {
+      if (window.scrollY < 200) {
+        setActiveTab("");
+      }
+    };
+    window.addEventListener("scroll", scroll, false);
+    return () => window.removeEventListener("scroll", scroll, false);
+  }, []);
+
   return (
     <footer
-      className="footer_footer__h8U9o"
+      className="footer_footer"
       style={{ opacity: "1", transform: "none" }}
     >
-      <div className="footer_container__HdEoV">
-        <div className="footer_left__h63j3">
-          <div className="footer_lockup__6Qt_9">
+      <div className="footer_container">
+        <div className="footer_left">
+          <div className="footer_lockup">
             <Link
-              className="footer_mainLogo__j0C_z"
+              className="footer_mainLogo"
               style={{ marginRight: "0px" }}
               href="/"
             >
-              <div className="footer_logo__cY_lO">
+              <div className="footer_logo">
                 <img
-                  alt="Capital Brand Logo"
+                  alt="Biztech Brand Logo"
                   sizes="100vw"
                   srcset="/image/biztechlogo.png"
                   src="/image/biztechlogo.png"
@@ -34,17 +47,23 @@ const Footer = () => {
               </div>
             </Link>
           </div>
-          <div className="footer_line__UuaEz"></div>
+          <div className="footer_line"></div>
           <Link
-            className="footer_tab__Ndquc footer_selected__GjUa9"
+            className={`footer_tab ${
+              activeTab === "managed-it-services" ? "footer_selected" : "false"
+            }`}
+            onClick={() => setActiveTab("managed-it-services")}
             to="managed-it-services"
           >
-            <div className="footer_icon__2qZ_U">
+            <div className="footer_icon">
               <img
                 alt="Tools"
                 sizes="100vw"
-                srcset="/icons/tools.svg"
-                src="/icons/tools.svg"
+                src={
+                  activeTab === "managed-it-services"
+                    ? "/icons/tools.svg"
+                    : "/icons/tools-white.svg"
+                }
                 decoding="async"
                 data-nimg="fill"
                 loading="lazy"
@@ -54,38 +73,29 @@ const Footer = () => {
                   width: "100%",
                   inset: "0px",
                   objectFit: "contain",
-                  color: "red",
-                  opacity: "0",
-                }}
-              />
-              <img
-                alt="Tools"
-                sizes="100vw"
-                srcset="/icons/tools.svg"
-                src="/icons/tools.svg"
-                decoding="async"
-                data-nimg="fill"
-                loading="lazy"
-                style={{
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  inset: "0px",
-                  objectFit: "contain",
-                  color: "red",
+                  color: "transparent",
                   opacity: "1",
                 }}
               />
             </div>
-            <div className="footer_popup__6zzE6">Managed IT</div>
+            <div className="footer_popup">Managed IT</div>
           </Link>
-          <Link className="footer_tab__Ndquc false" to="web-design">
-            <div className="footer_icon__2qZ_U">
+          <Link
+            className={`footer_tab ${
+              activeTab === "web-design" ? "footer_selected" : "false"
+            }`}
+            onClick={() => setActiveTab("web-design")}
+            to="web-design"
+          >
+            <div className="footer_icon">
               <img
                 alt="Code"
                 sizes="100vw"
-                srcset="/icons/code.svg"
-                src="/icons/code.svg"
+                src={
+                  activeTab === "web-design"
+                    ? "/icons/code.svg"
+                    : "/icons/code-white.svg"
+                }
                 decoding="async"
                 data-nimg="fill"
                 loading="lazy"
@@ -97,36 +107,27 @@ const Footer = () => {
                   objectFit: "contain",
                   color: "transparent",
                   opacity: "1",
-                }}
-              />
-              <img
-                alt="Code"
-                sizes="100vw"
-                srcset="/icons/code.svg"
-                src="/icons/code.svg"
-                decoding="async"
-                data-nimg="fill"
-                loading="lazy"
-                style={{
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  inset: "0px",
-                  objectFit: "contain",
-                  color: "transparent",
-                  opacity: "0",
                 }}
               />
             </div>
-            <div className="footer_popup__6zzE6">Web Design</div>
+            <div className="footer_popup">Web Design</div>
           </Link>
-          <Link className="footer_tab__Ndquc false" to="networking-solutions">
-            <div className="footer_icon__2qZ_U">
+          <Link
+            className={`footer_tab ${
+              activeTab === "networking-solutions" ? "footer_selected" : "false"
+            }`}
+            onClick={() => setActiveTab("networking-solutions")}
+            to="networking-solutions"
+          >
+            <div className="footer_icon">
               <img
                 alt="Network"
                 sizes="100vw"
-                srcset="/icons/networking.svg"
-                src="/icons/networking.svg"
+                src={
+                  activeTab === "networking-solutions"
+                    ? "/icons/networking.svg"
+                    : "/icons/networking-white.svg"
+                }
                 decoding="async"
                 data-nimg="fill"
                 loading="lazy"
@@ -138,54 +139,27 @@ const Footer = () => {
                   objectFit: "contain",
                   color: "transparent",
                   opacity: "1",
-                }}
-              />
-              <img
-                alt="Network"
-                sizes="100vw"
-                srcset="/icons/networking.svg"
-                src="/icons/networking.svg"
-                decoding="async"
-                data-nimg="fill"
-                loading="lazy"
-                style={{
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  inset: "0px",
-                  objectFit: "contain",
-                  color: "transparent",
-                  opacity: "0",
                 }}
               />
             </div>
-            <div className="footer_popup__6zzE6">Networking Solutions</div>
+            <div className="footer_popup">Networking Solutions</div>
           </Link>
-          <Link className="footer_tab__Ndquc false" to="data-management">
-            <div className="footer_icon__2qZ_U">
-              <img
-                alt="Data"
-                sizes="100vw"
-                srcset="/icons/data.svg"
-                src="/icons/data.svg"
-                decoding="async"
-                data-nimg="fill"
-                loading="lazy"
-                style={{
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  inset: "0px",
-                  objectFit: "contain",
-                  color: "transparent",
-                  opacity: "1",
-                }}
-              />
+          <Link
+            className={`footer_tab ${
+              activeTab === "data-management" ? "footer_selected" : "false"
+            }`}
+            onClick={() => setActiveTab("data-management")}
+            to="data-management"
+          >
+            <div className="footer_icon">
               <img
                 alt="SeDatand"
                 sizes="100vw"
-                srcset="/icons/data.svg"
-                src="/icons/data.svg"
+                src={
+                  activeTab === "data-management"
+                    ? "/icons/data.svg"
+                    : "/icons/data-white.svg"
+                }
                 decoding="async"
                 data-nimg="fill"
                 loading="lazy"
@@ -196,40 +170,37 @@ const Footer = () => {
                   inset: "0px",
                   objectFit: "contain",
                   color: "transparent",
-                  opacity: "0",
+                  opacity: "1",
                 }}
               />
             </div>
-            <div className="footer_popup__6zzE6">Data Management</div>
+            <div className="footer_popup">Data Management</div>
           </Link>
-          <div
-            className="footer_underline__la4Wc"
+          {/* <div
+            className="footer_underline"
             style={{ transform: "translateX(0px) scale(1)" }}
-          ></div>
+          ></div> */}
         </div>
-        <div className="footer_right__iQ9v4">
-          <div className="footer_mainContainer__SOtcL">
+        <div className="footer_right">
+          <div className="footer_mainContainer">
             <Link
-              className="footer_link__BTBa6 false"
+              className="footer_link false"
               target="_blank"
               href="https://twitter.com/"
             >
               Twitter
             </Link>
-            <Link className="footer_link__BTBa6 false" href="/founders">
+            <Link className="footer_link false" href="/founders">
               Founders
             </Link>
-            <Link className="footer_link__BTBa6 false" href="/team">
+            <Link className="footer_link false" href="/team">
               Team
             </Link>
-            <Link className="footer_link__BTBa6 false" href="/faqs">
+            <Link className="footer_link false" href="/faqs">
               FAQs
             </Link>
           </div>
-          <Link
-            className="footer_mainButton__c_pnE"
-            href="http://localhost:3000"
-          >
+          <Link className="footer_mainButton" href="http://localhost:3000">
             Start
           </Link>
         </div>
